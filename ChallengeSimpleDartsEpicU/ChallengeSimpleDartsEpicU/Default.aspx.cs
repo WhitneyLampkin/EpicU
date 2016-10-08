@@ -11,17 +11,17 @@ namespace ChallengeSimpleDartsEpicU
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var random = new Random();
+            //var random = new Random();
+            //var dartGame = new Darts.Dart(random);
+            //dartGame.Throw();
+            
+        }
 
-            var dartGame = new Darts.Dart(random);
-
-            dartGame.Throw();
-
-            resultLabel.Text = String.Format("Score: {0} </br>Value: {1}</br>Band: {2}</br>Bullseye: {3}", 
-                dartGame.Score,
-                dartGame.Value,
-                dartGame.Band,
-                dartGame.Bullseye);
+        protected void playButton_Click(object sender, EventArgs e)
+        {
+            var game = new Game("Player 1", "Player 2");
+            string result = game.playGame();
+            resultLabel.Text = result;
         }
     }
 }

@@ -26,3 +26,19 @@ the score from each dart to the Player's score.
 The first Player to reach 300 points wins.  
 
 If the dart lands in the double or triple band, multiply the score by 2x or 3x, respectively.  
+
+Display the winner and both player's scores on the web page.
+
+(3) In the Web Forms project create a Score class that contains a static method 
+that will calculate the score for a dart throw.  
+
+Each dart can score from 1 to 20, or the bullseye.
+If the dart lands in the outer band, multiply the dart's score by two.  
+If the dart lands in the inner band, multiply the dart's score by three.  
+If the dart lands in the outer bullseye, it is scored as 25.  
+If the dart lands in the inner bullseye, it is scored as 50.
+
+Try to keep the classes as short as possible and cohesive.
+Try to keep the methods as short as possible ... no more than 6 lines of code.
+
+(These are guidelines ... if you can't do that, no worries.)

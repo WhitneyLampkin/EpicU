@@ -8,61 +8,57 @@ namespace Darts
 {
     public class Dart
     {
-        Random random = new Random();
-
         public int Value { get; set; }
         public int Score { get; set; }
         public bool Band { get; set; }
         public bool Bullseye { get; set; }
 
-        public Dart(Random random) { }
+        Random random = new Random();
+        public Dart(Random randomDart) { random = randomDart; }
 
         public int Throw()
         {
-            Dart dart = new Dart(random);
+            Score = random.Next(0, 21);
 
-            dart.Score = random.Next(20);
-
-            if (dart.Score == 0)
+            if (Score == 0)
             {
-                dart.Band = false;
-                dart.Bullseye = true;
+                Bullseye = true;
 
-                calculateBullseye(dart);
+                calculateBullseye();
             }
 
             else
             {
-                dart.Band = true;
-                dart.Bullseye = false;
+                Band = true;
 
-                calculateBand(dart);
+                calculateBand();
             }
-            return dart.Value;
+
+            return Value;
         }
 
-        public int calculateBand(Dart dart)
+        public int calculateBand()
         {
-            int dartScore = dart.Score;
+            int dartScore = Score;
 
             if (random.NextDouble() < 0.05)
-                { return dart.Value = dartScore * 3; }
+                { return Value = dartScore * 3; }
 
-            if (random.NextDouble() > 0.95)
-                { return dart.Value = dartScore * 2; }
+            else if (random.NextDouble() > 0.95)
+                { return Value = dartScore * 2; }
 
             else
-                { return dart.Value = dartScore; }
+                { return Value = dartScore; }
         }
 
-        public int calculateBullseye(Dart dart)
+        public int calculateBullseye()
         {
-            int dartScore = dart.Score;
+            int dartScore = Score;
 
             if (random.NextDouble() > 0.05)
-                { return dart.Value = dartScore * 3; }
+                { return Value = dartScore * 3; }
             else
-                { return dart.Value = dartScore * 2; }
+                { return Value = dartScore * 2; }
         }
     }
 }
