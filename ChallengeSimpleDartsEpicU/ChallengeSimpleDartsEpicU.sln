@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeSimpleDartsEpicU", "ChallengeSimpleDartsEpicU\ChallengeSimpleDartsEpicU.csproj", "{A43355C0-1245-45FF-A502-1C2AC81C5425}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Darts", "Darts\Darts.csproj", "{0CA28BF7-3967-48DA-A244-18CEF54CBBAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2E1D0F42-91B6-4465-9020-8286D602060C}"
+	ProjectSection(SolutionItems) = preProject
+		Instructions.txt = Instructions.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A43355C0-1245-45FF-A502-1C2AC81C5425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43355C0-1245-45FF-A502-1C2AC81C5425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43355C0-1245-45FF-A502-1C2AC81C5425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43355C0-1245-45FF-A502-1C2AC81C5425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA28BF7-3967-48DA-A244-18CEF54CBBAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA28BF7-3967-48DA-A244-18CEF54CBBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA28BF7-3967-48DA-A244-18CEF54CBBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA28BF7-3967-48DA-A244-18CEF54CBBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
