@@ -14,7 +14,12 @@ namespace MegaChallengeWar.Domain
 
         private void showHand()
         {
-            //Shows all the cards a player currently has.
+            //var cards = CardDeck.ToString();
+            //foreach (var card in cards)
+            //{
+            //    String.Format("Card: {0}</br>", card.ToString());
+            //}
+            //return cards;
         }
 
         private void claimBounty()

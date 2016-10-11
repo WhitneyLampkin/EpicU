@@ -9,7 +9,7 @@ namespace MegaChallengeWar.Domain
     public class Deck
     {
         public const int TotalCards = 52;
-        public List<Card> cardDeck { get; set; }
+        public List<Card> CardDeck { get; set; }
         
         Random random = new Random();
         
@@ -32,6 +32,8 @@ namespace MegaChallengeWar.Domain
                 cards.Add(diamonds);
                 cards.Add(hearts);
                 cards.Add(spades);
+
+                var cardId = Guid.NewGuid();
             }
 
             return cards;
@@ -39,7 +41,7 @@ namespace MegaChallengeWar.Domain
         
         public void Shuffle()
         {
-            cardDeck.OrderBy(a => Guid.NewGuid());
+            CardDeck.OrderBy(a => Guid.NewGuid());
         }
 
         public void DealCards()
@@ -49,7 +51,7 @@ namespace MegaChallengeWar.Domain
 
         private string showDeck()
         {
-            var cards = cardDeck.ToString();
+            var cards = CardDeck.ToString();
             foreach (var card in cards)
             {
                 String.Format("Card: {0}</br>", card.ToString());

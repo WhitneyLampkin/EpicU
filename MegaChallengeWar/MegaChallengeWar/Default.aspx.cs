@@ -12,7 +12,7 @@ namespace MegaChallengeWar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*var cards = new List<Card>();
+            var cards = new List<Card>();
 
             string[] cardFace = new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace" };
             string[] cardSuit = new string[] { "clubs", "diamonds", "hearts", "spades" };
@@ -29,11 +29,12 @@ namespace MegaChallengeWar
                 cards.Add(hearts);
                 cards.Add(spades);
             }
+            var cardDeck = cards;
 
             foreach (var card in cards)
             {
                 resultLabel.Text += String.Format("Card: {0}</br>", card.ToString());
-            }*/
+            }
         }
     }
 }
