@@ -110,6 +110,8 @@ namespace ChallengeHeroMonsterClassesEpicU
                 dice.Sides = DamageMaximum;
 
                 return dice.Roll();
+
+                //rolls dice
             }
 
             public void Defend(int damageInflicted)
