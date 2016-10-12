@@ -13,6 +13,24 @@ namespace MegaChallengeWar {
     public partial class WebForm1 {
         
         /// <summary>
+        /// player1Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label player1Label;
+        
+        /// <summary>
+        /// player2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label player2Label;
+        
+        /// <summary>
         /// resultLabel control.
         /// </summary>
         /// <remarks>

@@ -10,46 +10,61 @@ namespace MegaChallengeWar.Domain
     {
         public const int TotalCards = 52;
         public List<Card> CardDeck { get; set; }
+        private Random random { get; set; }
         
-        Random random = new Random();
-        
-        
-        public List<Card> Cards()
+        public Deck()
         {
-            var cards = new List<Card>();
+            var deck = new List<Card>();
 
             string[] cardFace = new string[] {"2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"};
             string[] cardSuit = new string[] { "clubs", "diamonds", "hearts", "spades" };
 
             for (int i = 0; i < cardFace.Length-1; i++)
             {
+                //Don't forget to come back and refactor this code
+
                 var clubs = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(0));
                 var diamonds = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(1));
                 var hearts = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(2));
                 var spades = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(3));
 
-                cards.Add(clubs);
-                cards.Add(diamonds);
-                cards.Add(hearts);
-                cards.Add(spades);
+                deck.Add(clubs);
+                deck.Add(diamonds);
+                deck.Add(hearts);
+                deck.Add(spades);
 
-                var cardId = Guid.NewGuid();
+                var cardID = Guid.NewGuid();
             }
-
-            return cards;
         }
-        
-        public void Shuffle()
+
+        public void Shuffle(List<Card> cards)
         {
-            CardDeck.OrderBy(a => Guid.NewGuid());
+            //I'm a little concerned about whether or not this will generate a new random deck each time. 
+            //I'm hoping that the code will generate a new guid each time I call this method (for each new game).
+
+            var deck = cards;
+            deck.OrderBy(a => Guid.NewGuid());
         }
 
-        public void DealCards()
+        public void DealCard(Player player1, Player player2)
         {
-            //Needs to alternate, be random & show who gets which cards.
+            var player1Hand = new List<Card>();
+            var player2Hand = new List<Card>();
+            var currentCard = CardDeck.FirstOrDefault<Card>();
+
+            Shuffle(CardDeck);
+
+            while (CardDeck.Count > 0)
+            {
+                player1Hand.Add(currentCard);
+                CardDeck.Remove(currentCard);
+
+                player2Hand.Add(currentCard);
+                CardDeck.Remove(currentCard);
+            }
         }
 
-        private string showDeck()
+        private string displayDeck()
         {
             var cards = CardDeck.ToString();
             foreach (var card in cards)

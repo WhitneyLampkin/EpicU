@@ -27,9 +27,13 @@ namespace MegaChallengeWar.Domain
             var gameDeck = new List<Card>().OrderBy(a => Guid.NewGuid());
         }
 
-        private void playGame()
+        private void playGame(List<Card> deck, Player player1, Player player2)
         {
+            var cardDeck = deck;
+            var player1Name = player1.Name;
+            var player2Name = player2.Name;
 
+            
         }
 
         private void playWarRound()
@@ -41,6 +45,11 @@ namespace MegaChallengeWar.Domain
         {
             string result = "result";
             return result;
+        }
+
+        public void scoreRound(Card p1Card, Card p2Card)
+        {
+            //Add switch statement
         }
     }
 }
