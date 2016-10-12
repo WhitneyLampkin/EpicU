@@ -10,11 +10,38 @@ namespace MegaChallengeWar.Domain
     {
         public string Face { get; set; }
         public string Suit { get; set; }
-        public Guid CardId { get; set; }
+        private Guid CardId { get; set; }
+
+        public int CardValue()
+        {
+            int value = 0;
+
+            switch (Face)
+            {
+                case "Jack":
+                    value = 11;
+                    break;
+                case "Queen":
+                    value = 12;
+                    break;
+                case "King":
+                    value = 13;
+                    break;
+                case "Ace":
+                    value = 14;
+                    break;
+                default:
+                    value = int.Parse(Face);
+                    break;
+            }
+            return value;
+        }
 
         //We need a card Constructor 
-        public Card(string cardFace, string cardSuit)
+        public Card(string cardFace, string cardSuit, Guid id)
         {
+            var cardId = id;
+
             Face = cardFace;
             Suit = cardSuit;
         }

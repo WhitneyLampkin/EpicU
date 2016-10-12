@@ -10,58 +10,65 @@ namespace MegaChallengeWar.Domain
     {
         public const int TotalCards = 52;
         public List<Card> CardDeck { get; set; }
+        public Guid CardId { get; set; }
         private Random random { get; set; }
         
         public Deck()
         {
-            var deck = new List<Card>();
+            var CardDeck = new List<Card>();
+            CardId = Guid.NewGuid();
 
             string[] cardFace = new string[] {"2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"};
             string[] cardSuit = new string[] { "clubs", "diamonds", "hearts", "spades" };
 
             for (int i = 0; i < cardFace.Length-1; i++)
             {
-                //Don't forget to come back and refactor this code
+                var clubs = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(0), CardId);
+                var diamonds = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(1), CardId);
+                var hearts = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(2), CardId);
+                var spades = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(3), CardId);
 
-                var clubs = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(0));
-                var diamonds = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(1));
-                var hearts = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(2));
-                var spades = new Card(cardFace.ElementAt(i), cardSuit.ElementAt(3));
+                CardDeck.Add(clubs);
+                CardDeck.Add(diamonds);
+                CardDeck.Add(hearts);
+                CardDeck.Add(spades);
 
-                deck.Add(clubs);
-                deck.Add(diamonds);
-                deck.Add(hearts);
-                deck.Add(spades);
-
-                var cardID = Guid.NewGuid();
+                //foreach (var suit in cardSuit)
+                //{
+                //    CardDeck.Add(new Card(cardFace.ElementAt(i), cardSuit.ElementAt(i), CardId));
+                //}
             }
         }
 
-        public void Shuffle(List<Card> cards)
+        /*public void Shuffle(List<Card> cards)
         {
             //I'm a little concerned about whether or not this will generate a new random deck each time. 
             //I'm hoping that the code will generate a new guid each time I call this method (for each new game).
-
             var deck = cards;
             deck.OrderBy(a => Guid.NewGuid());
+        }*/
+
+        public void DealCards(Player player1, Player player2)
+        {
+            var deck = new List<Card>();
+
+            while (deck.Count > 0)
+            {
+                DealCard(player1);
+                DealCard(player2);
+            }
+            
         }
 
-        public void DealCard(Player player1, Player player2)
+        public string DealCard(Player player)
         {
-            var player1Hand = new List<Card>();
-            var player2Hand = new List<Card>();
-            var currentCard = CardDeck.FirstOrDefault<Card>();
-
-            Shuffle(CardDeck);
-
-            while (CardDeck.Count > 0)
-            {
-                player1Hand.Add(currentCard);
+            var playerHand = new List<Card>();
+            var currentCard = CardDeck.ElementAt(random.Next(CardDeck.Count));
+            
+                playerHand.Add(currentCard);
                 CardDeck.Remove(currentCard);
 
-                player2Hand.Add(currentCard);
-                CardDeck.Remove(currentCard);
-            }
+            return playerHand.ToString();
         }
 
         private string displayDeck()

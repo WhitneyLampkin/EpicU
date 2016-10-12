@@ -22,6 +22,15 @@ namespace MegaChallengeWar {
         protected global::System.Web.UI.WebControls.Label player1Label;
         
         /// <summary>
+        /// playButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button playButton;
+        
+        /// <summary>
         /// player2Label control.
         /// </summary>
         /// <remarks>

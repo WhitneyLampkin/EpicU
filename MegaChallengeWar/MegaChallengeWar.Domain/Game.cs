@@ -6,50 +6,57 @@ using System.Threading.Tasks;
 
 namespace MegaChallengeWar.Domain
 {
-    class Game
+    public class Game
     {
         Random random = new Random();
 
-        public Player Player1 { get; set; }
-        public Player Player2 { get; set; }
+        private Player player1 { get; set; }
+        private Player player2 { get; set; }
         public List<Card> Deck { get; set; }
 
-        public Game(string p1Name, string p2Name, List<Card> cardDeck)
+        public Game(string p1Name, string p2Name)
         {
-            var Player1 = new Player();
-            Player1.Name = p1Name;
-
-            var Player2 = new Player();
-            Player2.Name = p2Name;
-
-            //Check to see if ordering the deck will also shuffle. 
-            //If so, this may work since this code should generate a new Guid each time a game is started. 
-            var gameDeck = new List<Card>().OrderBy(a => Guid.NewGuid());
-        }
-
-        private void playGame(List<Card> deck, Player player1, Player player2)
-        {
-            var cardDeck = deck;
-            var player1Name = player1.Name;
-            var player2Name = player2.Name;
-
+            Player player1 = new Player("p1Name");
+            Player player2 = new Player("p2Name");
             
+            //var Deck = new List<Card>().OrderBy(a => Guid.NewGuid());
         }
 
-        private void playWarRound()
+        public string PlayGame()
         {
-            //If the cards are the same rank, it is War. Each player turns up one card face down and one card face up.
+            var deck = new Deck();
+            string result = " ";
+            deck.DealCards(player1, player2);
+
+            //result += String.Format("<br/> {0} received the following cards: {1} <br/>{2} received the following cards: {3}<br/>",
+                //player1.Name, player2.Name, player1.Hand.ToString(), player2.Hand.ToString());
+
+            while (player1.Hand.Count > 0 && player2.Hand.Count > 0)
+            {
+                var warGame = new War();
+                warGame.startWarRound(player1, player2);
+            }
+
+            result += displayResults();
+
+            return result;
+ 
+        }
+        private string displayStartMsg()
+        {
+            string result = "Dealing Card...";
+            return result;
+
         }
 
         private string displayResults()
         {
-            string result = "result";
-            return result;
-        }
+            string result = "And the winnger is: ";
 
-        public void scoreRound(Card p1Card, Card p2Card)
-        {
-            //Add switch statement
+            if (player1.Hand.Count == 0) result += "<h2>Player 1 Wins</h2>";
+            else result += "<h2>Player 2 Wins</h2>";
+
+            return result;
         }
     }
 }

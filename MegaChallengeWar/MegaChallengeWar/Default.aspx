@@ -13,6 +13,9 @@
             <%--<asp:Image ID="card1Image" runat="server" Height="180px" Width="180px" />--%>
             <img src="Images/10_of_clubs.png" />
         </div>
+
+        <asp:Button ID="playButton" runat="server" Text="Play War!" OnClick="playButton_Click" />
+
         <div class="col-md-4">
             <%--<asp:Image ID="card2Image" runat="server" Height="180px" Width="180px" />--%>
             <img src="Images/10_of_clubs.png" />

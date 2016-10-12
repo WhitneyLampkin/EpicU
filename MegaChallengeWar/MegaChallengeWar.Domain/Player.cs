@@ -12,7 +12,14 @@ namespace MegaChallengeWar.Domain
         public int Score { get; set; }
         public List<Card> Hand { get; set; }
 
-        private string showHand()
+        //constructor
+        public Player(string name)
+        {
+            Name = name;
+            Hand = new List<Card>();
+        }
+
+        private string showHand(Player player)
         {
             var playerHand = new List<Card>();
 
@@ -23,14 +30,6 @@ namespace MegaChallengeWar.Domain
             }
             return cards;
         }
-
-        //private void claimBounty(List<Card> bounty)
-        //{
-        //    //When the player wins the bounty, all of the bounty cards should be added to their list of cards.
-
-        //    var bountyCards = bounty;
-            
-        //}
 
         public void playCard(List<Card> playerHand)
         {
