@@ -16,8 +16,8 @@ namespace MegaChallengeWar.Domain
 
         public Game(string p1Name, string p2Name)
         {
-            Player player1 = new Player("p1Name");
-            Player player2 = new Player("p2Name");
+            player1 = new Player("p1Name");
+            player2 = new Player("p1Name");
             
             //var Deck = new List<Card>().OrderBy(a => Guid.NewGuid());
         }
