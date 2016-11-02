@@ -1,0 +1,100 @@
+﻿.benefits, .participation, .preamble, .requirements, .summary{
+	border-bottom: 3px solid black;
+}
+
+.design-archives{
+	-ms-transform: rotate(20deg); 
+    -webkit-transform: rotate(20deg); 
+    transform: rotate(20deg);
+}
+
+.design-selection{
+	-ms-transform: rotate(-30deg); 
+    -webkit-transform: rotate(-30deg); 
+    transform: rotate(-30deg);	
+}
+
+.design-archives, 
+.design-selection,
+.zen-resources{
+	border: 3px solid black;
+	display: inline-block;
+	margin-bottom: 10px;
+	margin-right: 3px;
+	margin-top: 50px;
+    padding: 10px;
+}
+
+.page-wrapper{
+	margin: 300px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.participation{
+	border-top: 3px solid black;
+}
+
+.summary{
+	text-align: center;
+}
+
+.zen-resources{
+	-ms-transform: rotate(30deg); 
+    -webkit-transform: rotate(30deg); 
+    transform: rotate(30deg)
+}
+
+a{
+	color: #D4B771;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #00e6ac;
+}
+
+body{
+
+	background: url(http://4.bp.blogspot.com/-8Ma1msTDPIg/UcuWfGGqxtI/AAAAAAAAM2c/ubaz_j3_1LM/s1600/chevron4s.jpg) left no-repeat fixed, 
+	            url(http://4.bp.blogspot.com/-8Ma1msTDPIg/UcuWfGGqxtI/AAAAAAAAM2c/ubaz_j3_1LM/s1600/chevron4s.jpg) right no-repeat fixed;
+	background-size: 400px 700px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+footer{
+	margin-top: 50px;
+	text-align: center;
+}
+
+footer>a{
+	background-color: #D4B771;
+	color: white;
+	margin-top: 0px;
+}
+
+header{
+	margin-left: 100px;	
+}
+
+header>h1, header>h2{
+	-ms-transform: rotate(-20deg); 
+	-webkit-transform: rotate(-20deg); 
+	border: 3px solid black;
+    display: inline-block;
+	margin: 30px;
+    padding: 10px;
+    transform: rotate(-20deg);
+}
+
+h1, h2, h3, h4, h5{
+	color: #D4B771;
+	font-family: 'Amatic SC', cursive;
+	text-align: center;
+}
+
+ul {
+    list-style-type: upper-roman;
+}
