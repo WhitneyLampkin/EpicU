@@ -2,6 +2,8 @@
 
 Personal Blog: http://whitneysblog.azurewebsites.net
 
+CSS Zen Garden Assignment Live Demo: http://codepen.io/WLampkin/full/VmvroO/
+
 HTML Practice (Chemistry Lab Report) Live Demo: http://codepen.io/WLampkin/full/eBpebe/
 
 FreeCodeCamp's Tribute Page Project: http://codepen.io/WLampkin/full/BLVdKB/
