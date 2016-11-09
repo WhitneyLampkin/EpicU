@@ -1,33 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <script>
 <link 		href="https://fonts.googleapis.com/css?family=Assistant:800|Bungee|Bungee+Inline|Bungee+Shade|Carter+One|Lobster|Slackey" rel="stylesheet">
 </script>
 
 <script>
-  $(document).ready(function(){
-          $("#submitBtn").on('click', function(){
-          $('<li />', {
-            text: $('.newItem').val()
-          }).prependTo($('.list'));
+      //Adds item to list when the 'Add to List' button is clicked.
+      $("#addBtn").on('click', function() {
+        $('<li />', {
+          text: $('.newItem').val()
+        }).prependTo($('.list'));
 
-          $('.newItem').val(' ');
-          $('.newItem').focus();
-          });
+        $('.newItem').val(' ');
+        $('.newItem').focus();
+      });
 
-          $('input[type=text]').on('keydown', function(e) {
-              if (e.which == 13) {
-                  e.preventDefault();
-              }
-          });
-  }
+      //Adds item to list when enter key is pressed.
+      $("#newItem").keyup(function(event) {
+        if (event.keyCode == 13) {
+          $("#addBtn").click();
+        }
+      });
+
+      //Clears ALL items in the list when the 'Clear' button is pressed.
+      $("#clearBtn").on('click', function() {
+        $('.list').empty();
+      });
 </script>
+<script><link href="https://fonts.googleapis.com/css?family=Assistant:800|Bungee|Bungee+Inline|Bungee+Shade|Carter+One|Lobster|Slackey" rel="stylesheet"></script>
 
-<h1>List Maker</h1>
+<style> @import url('https://fonts.googleapis.com/css?family=Megrim|Monofett'); </style>
 
-New Item: <input type="text" class="newItem" name="newItem" placeholder="Enter Item's Name">
+<style>
+        #page-wrap {
+        width: 800px;
+        margin: 0 auto;
+        padding: 100px 0;
+      }
 
-<button type="button" id="submitBtn">Add</button>
+      body {
+        background-color: #FF0090;
+        color: white;
+        text-align: center;
+        font-family: 'Megrim', cursive;
+      }
 
-<p>Your List:</p>
+      h1 {
+        font-size: 800%;
+        margin-bottom: 30px;
+      }
 
-<ul class="list">
-</ul>
+      h2 {
+        font-size: 250%;
+      }
+
+      input[type=text], select {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 18px;
+        margin: 8px 0;
+        padding: 10px 14px;
+      }
+
+      .button {
+        background-color: #0000e6;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        display: inline-block;
+        font-size: 18px;
+        padding: 10px 14px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      .button:hover {
+          background-color: purple;
+          color: white;
+      }
+
+      p {
+        font-size: 180%;
+      }
+
+      ul {
+        font-size: 18px;
+        list-style: none;
+      }
+</style>
+</head>
+<body>
+      <div class "main" id="page-wrap">
+        <h1>List Maker</h1>
+        <h2>New Item: 
+          <input type="text" class="newItem" id="newItem"name="newItem" placeholder="Enter Item's Name">
+
+          <button class="button" type="button" id="addBtn">Add to List</button>
+          <button class="button" type="button" id="clearBtn">Clear List</button>
+         </h2>
+        <p>Your List:</p>
+
+        <ul class="list">
+        </ul>
+      </div>
+</body>
