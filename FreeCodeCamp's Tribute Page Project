@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whitney's FreeCodeCamp Tribute Page Project</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1 class="center">Chess Timeline</h1>
+  <h2 class="center">The Best Game on Earth</h2>
+  <img class="smaller-image" src="https://a2ua.com/chess/chess-001.jpg" alt="Chess Image">
+  <figcaption class="center">Figure 1: Chess Pieces</figcaption>
+  <div class="center">
+    <h3 class="center">A Brief Chess Timeline:</h3>
+    <ul>
+      <li>6th century – The game chaturanga probably evolved into its current form around this time in India.</li>
+      <li>569 – A Chinese emperor wrote a book of xiangqi, Xiang Jing, in AD 569.</li>
+      <li>c. 600 – The Karnamuk-i-Artakhshatr-i-Papakan contains references to the Persian game of shatranj</li>
+      <li>c. 720 – Chess spreads across the Islamic world from Persia.</li>
+      <li>c. 840 – Earliest surviving chess problems by Caliph Billah of Baghdad.</li>
+      <li>c. 900 – Entry on Chess in the Chinese work Huan Kwai Lu ('Book of Marvels').</li>
+      <li>997 – Versus de scachis is the earliest known work mentioning chess in Christian Western Europe.</li>
+      <li>1008 – Mention of chess in the will of Count Uregel, another early reference.</li>
+      <li>10th century – As-Suli writes Kitab Ash-Shatranj, the earliest known work to take a scientific approach to chess strategy.</li>
+      <li>late 10th century – Dark and light squares are introduced on a chessboard.</li>
+      <li>1173 – Earliest recorded use of algebraic chess notation.</li>
+      <li>1283 – Alfonso X compiles the Libro de los juegos, with an extensive collection of chess problems.</li>
+      <li>late 13th century – Pawns can now move two ranks on first move.</li>
+      <li>late 14th century – The en passant rule is introduced.</li>
+      <li>1422 – A manuscript from Kraków sets the rule that stalemate is a draw.</li>
+      <li>1471 – The Göttingen manuscript is the first book to deal solely with chess.</li>
+      <li>1474 – William Caxton publishes The Game and Playe of Chesse, the first chess book in English.</li>
+      <li>1475–1525 – The modern moves for the queen, bishop, and castling are slowly adopted.</li>
+      <li>1475 – Scachs d'amor the first published game of modern chess, written as a poem.</li>
+      <li>1493 - Hartmann Schedel publishes the Nuremberg Chronicle.</li>
+      <li>1497 – Luis Ramirez Lucena publishes the earliest surviving work on the modern European game.</li>
+      <li>1510 – Marco Girolamo Vida wrote Scacchia ludus(The Game of Chess) with the first reference to a goddess of chess.</li>
+      <li>1512 – Pedro Damiano publishes one of the first chess treatises, Questo libro e da imparare giocare a scachi et de li partiti</li>
+      <li>1561 – Ruy López coins the word gambit to describe opening sacrifices.</li>
+      <li>1690 – Openings are now systematically classified by the Traite de Lausanne.</li>
+    </ul>
+    <h3 class="center">To view more, click here: <a href="https://en.wikipedia.org/wiki/Timeline_of_chess">Full Chess Timeline</a>.</h3>
+  </div>
+  <hr>
+  <h4 class="center">A Pen By: Whitney Lampkin</h4>
+</body>
+</html>
