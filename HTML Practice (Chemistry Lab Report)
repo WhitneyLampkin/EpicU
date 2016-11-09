@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+       <h1>UV-VIS Lab Report</h1>
+    <h2>Determining the Percent Water in Acetone Using the Zwitterionic Dimroth-Reichardt Betaine ET-30 Dye</h2>
+
+    <h1>Abstract</h1>
+
+    <p>The primary purpose of this experiment is to determine the percent water in acetone using the Zwitterionic Dimroth-Reichardt Betaine ET-30 Dye.  The percent water in the unknown sample was determined to be ~0.8% and it absorbed radiation at an average λmax of 647 nm.   As expected, the absorved λmax  decreased as the percent water increased because of the stabilizing effects that water has on the ET (30) Dye. Picture clipping.pictClipping This sovatochromic shift is in agreement with literature researched for this experiment (1).</p>
+
+    <h1>Introduction</h1>
+    <br>
+
+    <h2>Purpose</h2>
+
+    <p>The primary purpose of this experiment is to determine the percent water in acetone using the Zwitterionic Dimroth-Reichardt Betaine ET-30 Dye.  This particular method is useful because of the solvatochromic shift of the ET-30 Dye when dissolved in solvents with varying degrees of polarity and/or hydrogen bonding abilities (1).  Polar solvents stabilize the ground state of the dye thus decreasing the λmax of the ET-30 as polarity increases (1).  Likewise, principles of UV-VIS spectroscopy will be studied and utilized during the process.</p>
+
+
+    <figure>
+        <img src="https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/spectrpy/Images/spctmetr.gif">
+        <figcaption>Figure 1. UV-VIS Spectrometer Diagram</figcaption>
+    </figure>
+
+    <h2>UV-VIS Spectroscopy</h2>
+
+    <p>UV-VIS Spectroscopy is made possible by the excitation of electrons in a molecule.  Electromagnetic radiation via a light source (UV or visible) passes through the sample to be analyzed.  If the energy of the light source is identical to the energy that the electron needs to move from the ground state to the excited state then a transition will occur and the radiation will be absorbed by the molecule (2).</p>
+
+    <figure>
+        <img src="http://pubs.rsc.org/services/images/RSCpubs.ePlatform.Service.FreeContent.ImageService.svc/ImageService/Articleimage/2010/NJ/b9nj00540d/b9nj00540d-s1.gif">
+        <figcaption>Figure 2. ET-30 Ground-State Structure</figcaption>
+    </figure>
+
+    <h3>Sovatochromic Shifts</h3>
+
+    <p>Solvents used to dissolve the sample can have an affect on the energy absorbed by the molecule.  This is known as a sovatochromic shift.  Sovatochromic shifts occur because the solvent has the ability to increase or decrease the band gap between the ground and excited states thus requiring different energies for electronic transitions, which will in turn affect the radiation energy absorbed.</p>
+
+    <h1>Experimental Methods</h1>
+
+    <h2>Preparation of Stock Solution</h2>
+
+    <p>A 1% (v/v) water/acetone stock solution with a total volume of 100 mL was prepared using a pipette to transfer 1 mL distilled water into a 100 mL volumetric flask and diluting to the mark with dry acetone.</p>
+
+    <h2>Preparation of Solutions</h2>
+
+    Using the 1% (v/v) water/acetone stock solution, six—5 mL solutions were made with the following percent water concentrations: 0%, 0.2%, 0.4%, 0.6%, 0.8% and 1.0%.  These solutions were prepared by adding 0, 1, 2, 3, 4, 5 mL of the 1% stock solution to a scintillation vial using a pipette and adding dry acetone to yield a total volume of 5 mL.  (The 0% solution contained acetone only and the 1% solution contained the stock solution only.)  There were a few changes made to the procedure given online.  The procedure called for 10 mL, but it was decided that 5 mL would be enough to obtain the UV-VIS readings and the second set of solutions with percent water concentrations of 10, 20, 50, and 70% (v/v) water/acetone were not analyzed.  The teacher’s assistant provided an unknown sample during the lab period.  
+
+    <h3>Addition of ET-30 Dye</h3>
+
+    <p>A pipette dropper was used to add 15 drops of ET-30 dye to each of the seven solutions.  When the dye was added, the solutions turned from a clear, colorless liquid to a clear, dark green liquid.  The intensity of the dark green color decreased as the percent water increased.</p>
+
+    <h2>Instrumentation</h2>
+
+    <p>
+        UV-VIS #2/VV-1601PC<br>
+        SHIMADZU<br>
+        UTD #41387
+    </p>
+
+    <h2>UV-VIS Readings</h2>
+
+    <p>A glass cuvette with path length of 1 cm was used to perform the readings.  The cuvette was rinsed with acetone and wiped with a kem wipe after each reading was complete.  Three readings were obtained for each of the seven solutions.  The absorption band appeared at 670 nm.</p>
+
+    <h2>Sample Calculations</h2>
+
+    <h3>Preparation of Standard Solutions</h3>
+
+    <p>[0.2%(100)]/10 = 2 mL</p>
+
+    <p>Determination of % Water in Unknown Sample</p>
+
+      <p>
+        y = [0.0031x – 0.1285] * 100%<br />
+        y = [(0.0023)(44.2) – 0.1285] * 100%<br />
+        y = 0.852% ≈ 0.5%
+      </p>
+
+    <h1>Statistics</h1>
+
+    <h3>Sample Standard Deviation</h3>
+
+
+
+    <h3>Sample Variance</h3>
+
+
+
+    <h1>Results</h1>
+
+    <p>A calibration curve showing ET(30) vs. Percent Water values was made using the values calculated from Table 1.  The ET(30)  values were calculated from the following equation: ET(30) = 28,590/λmax (Reference 2).  The trendline equation from this calibration curve was used to determine the percent water in the unknown sample as shown in the “Sample Calculations Section”.  The percent water in the unknown sample was determined to be ~0.5% using this method.</p>
+
+    <p>Table 1.  ET(30) vs. Percent Water</p>
+
+
+              <table style="width:100%">
+          <tr>
+            <th>% Water in Solution</th>
+             <th>λmax (nm)</th> 
+            <th>ET(30) = 28,590/λmax (kcal/mol)</th>
+           </tr>
+          <tr>
+            <td>0%</td>
+             <td>673</td> 
+            <td>42.4</td>
+           </tr>
+          <tr>
+            <td>0.2%</td>
+             <td>667</td> 
+            <td>42.9</td>
+           </tr>
+                  <tr>
+            <td>0.4%</td>
+             <td>656</td> 
+            <td>43.5</td>
+           </tr>
+                  <tr>
+            <td>0.6%</td>
+             <td>654</td> 
+            <td>43.6</td>
+           </tr>
+                  <tr>
+            <td>0.8%</td>
+             <td>650</td> 
+            <td>43.9</td>
+           </tr>
+                  <tr>
+            <td>1.0%</td>
+             <td>625</td> 
+            <td>45.7</td>
+           </tr>
+                  <tr>
+            <td>Unknown</td>
+             <td>647</td> 
+            <td>44.2</td>
+           </tr>
+        </table> 
+
+        <p>Graph 1. ET(30) vs. Percent Water Calibration Curve</p>
+
+
+
+    <p>The UV-VIS results are tabulated below for each of the six known percent water concentrations and the unknown sample.  As hypothesized, λmax decreased as the percent water in the solution increased.  Again, this is due to sovatochromic shifts caused by the increase in solvent, which is water in this case.</p>
+
+      <p>Table 2. UV-VIS Results</p> 
+
+              <table style="width:100%">
+          <tr>
+            <th>% Water in Solution</th>
+             <th>λmax (nm)</th> 
+              <th>λmax (nm)</th>
+              <th>λmax (nm)</th>
+            <th>Average λmax (nm)</th>
+           </tr>
+          <tr>
+            <td>0%</td>
+             <td>672</td> 
+            <td>673</td>
+              <td>674</td> 
+            <td>673</td>
+           </tr>
+          <tr>
+            <td>0.2%</td>
+             <td>668</td> 
+            <td>666</td>
+              <td>666</td> 
+            <td>667</td>
+           </tr>
+                  <tr>
+            <td>0.4%</td>
+             <td>655</td> 
+            <td>658</td>
+            <td>654</td> 
+            <td>656</td>
+           </tr>
+                  <tr>
+            <td>0.6%</td>
+             <td>653</td> 
+            <td>655</td>
+            <td>653</td> 
+            <td>654</td>
+           </tr>
+                  <tr>
+            <td>0.8%</td>
+             <td>650</td> 
+            <td>650</td>
+            <td>650</td> 
+            <td>650</td>
+           </tr>
+                  <tr>
+            <td>1.0%</td>
+            <td>617</td> 
+            <td>623</td>
+            <td>634</td> 
+            <td>625</td>
+           </tr>
+                  <tr>
+            <td>Unknown</td>
+             <td>647</td> 
+            <td>646</td>
+            <td>647</td> 
+            <td>646</td>
+           </tr>
+        </table> 
+
+    <h2>Discussion</h2>
+
+    <p>The objective of this lab was to determine the percent water in acetone of an unknown solution using the Zwitterionic Dimroth-Reichardt Betaine ET-30 Dye.  The percent water in the unknown sample was determined to be ~0.8% and it absorbed radiation at an average λmax of 647 nm.   As expected, the absorved λmax  decreased as the percent water increased because of the stabilizing effects that water has on the ET (30) Dye.  This sovatochromic shift is in agreement with literature researched for this experiment (1).  It is also worth noting that the intensity of the ET (30) Dye’s color decreased as the water content increased in the solutions.  Initially, it seemed as if the 0.4%, 0.6% and 0.8% solutions did not follow the sovatochromic shift like the other; however, it was later determined that the cause was due to human error after additional trials were performed.  The human error occurred because I did not rinse the glassware used to transfer the solutions from the volumetric flasks to the scintillation vials they were stored in before being analyzed.  Still, I was not satisfied by the calibration curve.  If allowed, I would do this experiment again to achieve a more linear trendline with more accuracy.</p>
+
+    <h2>Additional Questions</h2>
+
+    <p>
+        (See Results Section for Calibration Curve)
+    </p>
+        <ol>
+            <li>The shift involved in the sovatochromic band is the pi→pi* shift.</li>
+            <li>No, polarity is not the only solvent property that the ET(30) Dye is sensitive to.
+  <br>
+                (See Results Section)</li>
+            <li>Multiple solvents were not used for this experiment, only water (H20).   The wavelength values for the different percent water in acetone solutions did make sense because they decreased as the percent water increased.</li>
+            <li>Bulging Drum Tests
+                <br>
+                a)	The first test was performed to determine whether or not residual reactants were degassing from the product of the reaction (3).  Headspace Gas Chromatography was used to determine if residual ethylene oxide was degassing from the ethoxylated alcohol product (3).  It was not.
+                <br>
+                b)	The second hypothesis was that maybe the ethoxylated alcohol was breaking down by an auto-oxidative mechanism and forming various gaseous products (3).  Wet chemical analysis was used to find out if the product was breaking down into other materials and it was determined that NaBH4 was breaking down to produce hydrogen gas (3).  The hydrogen gas was the cause of the drums bulging. </li>
+        </ol>
+    
+
+    &nbsp
+    <br />
+    <h2>References</h2>
+    <ol>
+        <li>Vitha, Mark F.  Determining the Percent Water in Organic Solvents Using the Zwitterionic Dimroth-Reichardt Betaine ET-30 Dye.  Journal of Chemical Education.  Vol 78, 370-372 (2001).</li>
+        <li>Class Notes</li>
+        <li>Procter and Gamble Company.  “What Caused the Drums to Bulge?” in Professional Analytical Chemists in Industry—A Short Course in Problem Solving for Undergraduate Students.  Thorpe, T.M.  Anal. Chem.  1984, 56, 603A.</li>
+    </ol>
+      </div>
+
+
+</body>
+</html>
