@@ -1,0 +1,33 @@
+<script>
+<link 		href="https://fonts.googleapis.com/css?family=Assistant:800|Bungee|Bungee+Inline|Bungee+Shade|Carter+One|Lobster|Slackey" rel="stylesheet">
+</script>
+
+<script>
+  $(document).ready(function(){
+          $("#submitBtn").on('click', function(){
+          $('<li />', {
+            text: $('.newItem').val()
+          }).prependTo($('.list'));
+
+          $('.newItem').val(' ');
+          $('.newItem').focus();
+          });
+
+          $('input[type=text]').on('keydown', function(e) {
+              if (e.which == 13) {
+                  e.preventDefault();
+              }
+          });
+  }
+</script>
+
+<h1>List Maker</h1>
+
+New Item: <input type="text" class="newItem" name="newItem" placeholder="Enter Item's Name">
+
+<button type="button" id="submitBtn">Add</button>
+
+<p>Your List:</p>
+
+<ul class="list">
+</ul>
