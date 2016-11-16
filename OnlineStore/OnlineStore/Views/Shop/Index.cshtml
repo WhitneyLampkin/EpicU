@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OnlineStore.Models.Product>
+
+@{
+    ViewBag.Title = "Shop";
+}
+
+<h2>Shop Whitney's Closet</h2><hr /><br />
+
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <ul class="thumbnails myUL">
+                <li class="span3">
+                    <div class="thumbnail">
+                        <img class="myImage" src="@Html.DisplayFor(modelItem => item.Category)" alt="">
+                        <div class="caption">
+                            <h4>@Html.DisplayFor(modelItem => item.Name)</h4>
+                            <p><strike>$200.00</strike><span class="sale">&nbsp;$@Html.DisplayFor(modelItem => item.Price) </span></p>
+                            <button type="button" class="btn btn-default">@Html.ActionLink("View", "Details", new { id = item.ProductId })</button>
+                            <button type="button" class="btn btn-primary">Add to Cart @*@Html.ActionLink("Add to Cart", "AddToCart", "ShoppingCart", new { id = item.ProductId })*@</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    }
+</div>
