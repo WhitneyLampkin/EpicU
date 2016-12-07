@@ -4,13 +4,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace OnlineStore.Models
+namespace HYE_SocialNetwork.Models
 {
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
-        public Customer CxId { get; set; }
-
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -21,7 +19,7 @@ namespace OnlineStore.Models
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {C:\Users\Whitney Lampkin\Documents\Visual Studio 2015\Projects\EpicU\OnlineStore\OnlineStore\Models\Comment.cs
+    {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
