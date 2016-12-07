@@ -222,6 +222,10 @@
     <Compile Include="Migrations\201612071926598_OverrideDBConventions.Designer.cs">
       <DependentUpon>201612071926598_OverrideDBConventions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612072059111_AddForeignKeyToHYEQuestion.cs" />
+    <Compile Include="Migrations\201612072059111_AddForeignKeyToHYEQuestion.Designer.cs">
+      <DependentUpon>201612072059111_AddForeignKeyToHYEQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\HYEAnswer.cs" />
@@ -231,6 +235,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\HYEPrefix.cs" />
+    <Compile Include="ViewModels\QuestionFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612071926598_OverrideDBConventions.resx">
       <DependentUpon>201612071926598_OverrideDBConventions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612072059111_AddForeignKeyToHYEQuestion.resx">
+      <DependentUpon>201612072059111_AddForeignKeyToHYEQuestion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
