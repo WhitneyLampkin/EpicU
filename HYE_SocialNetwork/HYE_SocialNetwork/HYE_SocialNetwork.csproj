@@ -205,9 +205,28 @@
     <Compile Include="Migrations\201612071640022_InitialModel.Designer.cs">
       <DependentUpon>201612071640022_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612071709061_CreateHYETables.cs" />
+    <Compile Include="Migrations\201612071709061_CreateHYETables.Designer.cs">
+      <DependentUpon>201612071709061_CreateHYETables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071725206_CreatingHYETables.cs" />
+    <Compile Include="Migrations\201612071725206_CreatingHYETables.Designer.cs">
+      <DependentUpon>201612071725206_CreatingHYETables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071800245_AddForeignKey.cs" />
+    <Compile Include="Migrations\201612071800245_AddForeignKey.Designer.cs">
+      <DependentUpon>201612071800245_AddForeignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071926598_OverrideDBConventions.cs" />
+    <Compile Include="Migrations\201612071926598_OverrideDBConventions.Designer.cs">
+      <DependentUpon>201612071926598_OverrideDBConventions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\HYEAnswer.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\HYEQuestion.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -285,6 +304,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201612071640022_InitialModel.resx">
       <DependentUpon>201612071640022_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071709061_CreateHYETables.resx">
+      <DependentUpon>201612071709061_CreateHYETables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071725206_CreatingHYETables.resx">
+      <DependentUpon>201612071725206_CreatingHYETables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071800245_AddForeignKey.resx">
+      <DependentUpon>201612071800245_AddForeignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071926598_OverrideDBConventions.resx">
+      <DependentUpon>201612071926598_OverrideDBConventions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
