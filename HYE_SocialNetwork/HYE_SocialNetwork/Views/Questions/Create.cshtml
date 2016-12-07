@@ -1,0 +1,15 @@
+﻿@model HYE_SocialNetwork.Models.HYEQuestion
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Submit A Question</h2>
+<div class="form-group">
+    <form>
+        @Html.LabelFor(m => m.Question)
+        @Html.TextBoxFor(m => m.Question, new { @class = "form-control" })
+    </form>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
