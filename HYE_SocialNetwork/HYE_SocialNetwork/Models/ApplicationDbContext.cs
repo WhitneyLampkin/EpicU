@@ -17,5 +17,7 @@ namespace HYE_SocialNetwork.Models
         {
             return new ApplicationDbContext();
         }
+
+        //public System.Data.Entity.DbSet<HYE_SocialNetwork.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

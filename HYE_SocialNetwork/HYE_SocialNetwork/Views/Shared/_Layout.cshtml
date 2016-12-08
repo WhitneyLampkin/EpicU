@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,6 +23,9 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Submit Question", "Create", "Questions")</li>
                 </ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Users", "Create", "Questions")</li>
+                </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -32,7 +34,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - H.Y.E.</p>
+            <p>&copy; @DateTime.Now.Year - H.Y.E. (Have You Ever?)</p>
         </footer>
     </div>
 

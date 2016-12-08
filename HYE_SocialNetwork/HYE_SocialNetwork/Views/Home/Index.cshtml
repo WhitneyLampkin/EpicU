@@ -3,14 +3,28 @@
     ViewBag.Title = "Home Page";
 }
 
-<ul>
+<h2>While you were away...</h2>
+<hr />
+<ul class="questions">
     @foreach (var hyeQuestion in Model)
     {
         <li>
-            @hyeQuestion.DateTime @hyeQuestion.Question 
-            <br />
-            Submitted By: @hyeQuestion.Inquirer.DisplayName
-            <hr />
+            <div class="date">
+                <div class="month">
+                    @hyeQuestion.DateTime.ToString("MMM")
+                </div>
+                <div class="day">
+                    @hyeQuestion.DateTime.ToString("d ")
+                </div>
+            </div>  
+            <div class="details">
+                <span class="inquirer">
+                    @hyeQuestion.Inquirer.DisplayName
+                </span>
+                <span>
+                    @hyeQuestion.Question
+                </span>
+            </div> 
         </li>
         
     }
