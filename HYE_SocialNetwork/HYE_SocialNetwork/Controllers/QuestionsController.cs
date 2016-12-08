@@ -25,6 +25,7 @@ namespace HYE_SocialNetwork.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken] //Prevents CSRF Attacks
         public ActionResult Create(HYEQuestion viewModel)
         {
             if (!ModelState.IsValid)
