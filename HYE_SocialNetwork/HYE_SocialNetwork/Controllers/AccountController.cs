@@ -151,7 +151,17 @@ namespace HYE_SocialNetwork.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    MiddleInitial = model.MiddleInitial,
+                    LastName = model.LastName,
+                    Gender = model.Gender,
+                    Birthdate = model.Birthdate,
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

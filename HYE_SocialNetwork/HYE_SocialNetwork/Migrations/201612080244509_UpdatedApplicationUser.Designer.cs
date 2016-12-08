@@ -7,13 +7,13 @@ namespace HYE_SocialNetwork.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddForeignKeyToHYEQuestion : IMigrationMetadata
+    public sealed partial class UpdatedApplicationUser : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddForeignKeyToHYEQuestion));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UpdatedApplicationUser));
         
         string IMigrationMetadata.Id
         {
-            get { return "201612072059111_AddForeignKeyToHYEQuestion"; }
+            get { return "201612080244509_UpdatedApplicationUser"; }
         }
         
         string IMigrationMetadata.Source

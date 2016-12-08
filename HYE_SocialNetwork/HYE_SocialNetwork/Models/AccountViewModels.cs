@@ -64,6 +64,33 @@ namespace HYE_SocialNetwork.Models
 
     public class RegisterViewModel
     {
+        public string Picture { get; set; }
+
+        [Display(Name = "Profile Picture")]
+        public byte[] ProfilePicture { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [StringLength(1)]
+        [Display(Name = "Middle Initial")]
+        public string MiddleInitial { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Required]
+        [StringLength(1)]
+        public string Gender { get; set; }
+
+        [Required]
+        [Display(Name = "Date of Birth")]
+        public System.DateTime Birthdate { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

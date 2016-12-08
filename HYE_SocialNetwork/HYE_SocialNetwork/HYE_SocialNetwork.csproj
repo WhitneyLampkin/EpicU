@@ -222,9 +222,9 @@
     <Compile Include="Migrations\201612071926598_OverrideDBConventions.Designer.cs">
       <DependentUpon>201612071926598_OverrideDBConventions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612072059111_AddForeignKeyToHYEQuestion.cs" />
-    <Compile Include="Migrations\201612072059111_AddForeignKeyToHYEQuestion.Designer.cs">
-      <DependentUpon>201612072059111_AddForeignKeyToHYEQuestion.cs</DependentUpon>
+    <Compile Include="Migrations\201612080244509_UpdatedApplicationUser.cs" />
+    <Compile Include="Migrations\201612080244509_UpdatedApplicationUser.Designer.cs">
+      <DependentUpon>201612080244509_UpdatedApplicationUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -325,8 +325,8 @@
     <EmbeddedResource Include="Migrations\201612071926598_OverrideDBConventions.resx">
       <DependentUpon>201612071926598_OverrideDBConventions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612072059111_AddForeignKeyToHYEQuestion.resx">
-      <DependentUpon>201612072059111_AddForeignKeyToHYEQuestion.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612080244509_UpdatedApplicationUser.resx">
+      <DependentUpon>201612080244509_UpdatedApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
