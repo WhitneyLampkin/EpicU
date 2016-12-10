@@ -7,6 +7,7 @@ namespace HYE_SocialNetwork.Models
     {
         public DbSet<HYEQuestion> HYEQuestions { get; set; }
         public DbSet<HYEAnswer> HYEAnswers { get; set; }
+        public DbSet<Friendship> Friendships { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -18,6 +19,27 @@ namespace HYE_SocialNetwork.Models
             return new ApplicationDbContext();
         }
 
-        //public System.Data.Entity.DbSet<HYE_SocialNetwork.Models.ApplicationUser> ApplicationUsers { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<HYEAnswer>()
+                .HasRequired(a => a.HYEQuestion)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+
+            //Relationship between the Requester and Requestee for the Friendship model
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(u => u.Requesters)
+                .WithRequired(r => r.Requestee)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(u => u.Requestees)
+                .WithRequired(r => r.Requester)
+                .WillCascadeOnDelete(false);
+
+            base.OnModelCreating(modelBuilder);
+        }
+        
+        
     }
 }

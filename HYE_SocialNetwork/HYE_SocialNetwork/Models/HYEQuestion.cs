@@ -16,5 +16,7 @@ namespace HYE_SocialNetwork.Models
         public string Question { get; set; }
 
         public int? Liked { get; set; }
+        
+        public string InquirerId { get; set; }
     }
 }

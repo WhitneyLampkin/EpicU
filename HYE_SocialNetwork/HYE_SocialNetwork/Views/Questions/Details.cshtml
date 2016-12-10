@@ -1,0 +1,65 @@
+﻿@model HYE_SocialNetwork.Models.HYEQuestion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h4>Question </h4>
+<hr />
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Home", "Index")
+</p>
+<br />
+
+          
+                    <div class="question">
+                        @Html.DisplayFor(model => model.Question)
+                    </div>
+                    <hr />
+                    <div class="questionDetails">
+                        <div class="questionDate">
+                            @Html.DisplayFor(model => model.DateTime)
+                        </div>
+                        <div class="questionPoster">
+                            @Html.DisplayFor(model => model.Inquirer.DisplayName)
+                        </div>
+                    </div>
+<br/>
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.DateTime)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DateTime)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Question)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Question)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Liked)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Liked)
+                </dd>
+
+                <dt>Respond</dt>
+                <dd>
+                    <button class="btn btn-default btn-sm">No?</button>
+                    &nbsp;
+                    <button class="btn btn-default btn-sm">Yes?</button>
+                </dd>
+
+            </dl>
+            <br />
+        </div>
+

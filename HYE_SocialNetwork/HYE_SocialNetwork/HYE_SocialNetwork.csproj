@@ -80,12 +80,24 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -195,10 +207,15 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FriendshipsController.cs" />
+    <Compile Include="Controllers\HYEAnswersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="DTOs\FriendshipDto.cs" />
+    <Compile Include="DTOs\HYEAnswerDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -226,8 +243,62 @@
     <Compile Include="Migrations\201612080244509_UpdatedApplicationUser.Designer.cs">
       <DependentUpon>201612080244509_UpdatedApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612080448474_ChangedAnswerModel.cs" />
+    <Compile Include="Migrations\201612080448474_ChangedAnswerModel.Designer.cs">
+      <DependentUpon>201612080448474_ChangedAnswerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612080455032_AddOnModelCreating.cs" />
+    <Compile Include="Migrations\201612080455032_AddOnModelCreating.Designer.cs">
+      <DependentUpon>201612080455032_AddOnModelCreating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612080508314_AddedAnswerPropToHYEAnswer.cs" />
+    <Compile Include="Migrations\201612080508314_AddedAnswerPropToHYEAnswer.Designer.cs">
+      <DependentUpon>201612080508314_AddedAnswerPropToHYEAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612080534394_DatabaseChanges.cs" />
+    <Compile Include="Migrations\201612080534394_DatabaseChanges.Designer.cs">
+      <DependentUpon>201612080534394_DatabaseChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612082050214_ChangedQuestionId.cs" />
+    <Compile Include="Migrations\201612082050214_ChangedQuestionId.Designer.cs">
+      <DependentUpon>201612082050214_ChangedQuestionId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612082145490_HYEAnswersChanges.cs" />
+    <Compile Include="Migrations\201612082145490_HYEAnswersChanges.Designer.cs">
+      <DependentUpon>201612082145490_HYEAnswersChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612092029513_AddedFriendshipTable.cs" />
+    <Compile Include="Migrations\201612092029513_AddedFriendshipTable.Designer.cs">
+      <DependentUpon>201612092029513_AddedFriendshipTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612100141598_AddedFriendshipTable1.cs" />
+    <Compile Include="Migrations\201612100141598_AddedFriendshipTable1.Designer.cs">
+      <DependentUpon>201612100141598_AddedFriendshipTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612100157256_AddedPrimaryKeyToFriendshipModel.cs" />
+    <Compile Include="Migrations\201612100157256_AddedPrimaryKeyToFriendshipModel.Designer.cs">
+      <DependentUpon>201612100157256_AddedPrimaryKeyToFriendshipModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612100235364_GotAnError.cs" />
+    <Compile Include="Migrations\201612100235364_GotAnError.Designer.cs">
+      <DependentUpon>201612100235364_GotAnError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612100252057_GotAnError1.cs" />
+    <Compile Include="Migrations\201612100252057_GotAnError1.Designer.cs">
+      <DependentUpon>201612100252057_GotAnError1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612100252550_GotAnError2.cs" />
+    <Compile Include="Migrations\201612100252550_GotAnError2.Designer.cs">
+      <DependentUpon>201612100252550_GotAnError2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612101234399_AddedInquirerIdToHYEQuestions.cs" />
+    <Compile Include="Migrations\201612101234399_AddedInquirerIdToHYEQuestions.Designer.cs">
+      <DependentUpon>201612101234399_AddedInquirerIdToHYEQuestions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Following.cs" />
+    <Compile Include="Models\Friendship.cs" />
     <Compile Include="Models\HYEAnswer.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\HYEQuestion.cs" />
@@ -235,8 +306,12 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AllUsersViewModel.cs" />
+    <Compile Include="ViewModels\AskedViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\HYEPrefix.cs" />
     <Compile Include="ViewModels\QuestionFormViewModel.cs" />
+    <Compile Include="ViewModels\UsersViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -297,6 +372,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Questions\Create.cshtml" />
+    <Content Include="Views\Questions\Details.cshtml" />
+    <Content Include="Views\Questions\Answered.cshtml" />
+    <Content Include="Views\Questions\Asked.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
+    <Content Include="Views\Home\AllUsers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -327,6 +407,45 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612080244509_UpdatedApplicationUser.resx">
       <DependentUpon>201612080244509_UpdatedApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612080448474_ChangedAnswerModel.resx">
+      <DependentUpon>201612080448474_ChangedAnswerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612080455032_AddOnModelCreating.resx">
+      <DependentUpon>201612080455032_AddOnModelCreating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612080508314_AddedAnswerPropToHYEAnswer.resx">
+      <DependentUpon>201612080508314_AddedAnswerPropToHYEAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612080534394_DatabaseChanges.resx">
+      <DependentUpon>201612080534394_DatabaseChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612082050214_ChangedQuestionId.resx">
+      <DependentUpon>201612082050214_ChangedQuestionId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612082145490_HYEAnswersChanges.resx">
+      <DependentUpon>201612082145490_HYEAnswersChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612092029513_AddedFriendshipTable.resx">
+      <DependentUpon>201612092029513_AddedFriendshipTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612100141598_AddedFriendshipTable1.resx">
+      <DependentUpon>201612100141598_AddedFriendshipTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612100157256_AddedPrimaryKeyToFriendshipModel.resx">
+      <DependentUpon>201612100157256_AddedPrimaryKeyToFriendshipModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612100235364_GotAnError.resx">
+      <DependentUpon>201612100235364_GotAnError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612100252057_GotAnError1.resx">
+      <DependentUpon>201612100252057_GotAnError1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612100252550_GotAnError2.resx">
+      <DependentUpon>201612100252550_GotAnError2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612101234399_AddedInquirerIdToHYEQuestions.resx">
+      <DependentUpon>201612101234399_AddedInquirerIdToHYEQuestions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

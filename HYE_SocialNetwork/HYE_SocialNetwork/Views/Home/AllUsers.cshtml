@@ -1,0 +1,27 @@
+﻿@model HYE_SocialNetwork.ViewModels.AllUsersViewModel
+@{
+    ViewBag.Title = "AllUsers";
+}
+
+<h2>H.Y.E. Users</h2>
+<hr />
+
+@foreach(var hyeUser in Model.HYEUsers)
+{
+    <div class="profileContainer">
+    <p>
+       Name: @hyeUser.DisplayName
+    </p>
+    <p>
+        Email: @hyeUser.Email
+
+    </p>
+    <p>
+        Gender: @hyeUser.Gender
+    </p>
+    <p>
+        Birthday: @hyeUser.Birthdate
+    </p>
+        </div>
+}
+

@@ -1,26 +1,30 @@
 ﻿@model HYE_SocialNetwork.ViewModels.HomeViewModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Answered";
 }
 
-<h2>While you were away...</h2>
+<h2>@HttpContext.Current.User.Identity.Name's Profile</h2>&nbsp;
+    <h3>Answered Questions</h3>
+
+<hr />
 <div class="row">
+
     @foreach (var hyeQuestion in Model.NewQuestions)
     {
-        <div class="col-md-6 qContainer">
+        <div class="col-md-4 qContainer">
             <ul class="questions">
                 <li>
                     <div class="details">
                         <span class="inquirer">
-                            @hyeQuestion.Inquirer.DisplayName 
-                            
+                            @hyeQuestion.Inquirer.DisplayName
+
                             @if (Model.ShowActions)
                             {
                                 <button class="btn btn-sm btn-link js-toggle-friend" data-user-id="@hyeQuestion.Inquirer">Add Friend</button>
                             }
-                            
+
                         </span>
-                        <span class="spotlightText">
+                        <span>
                             @hyeQuestion.Question
                         </span>
                         <br /><br />
@@ -34,22 +38,20 @@
                         {
                             <button data-hyeQuestionId-id="@hyeQuestion.Id" class="btn btn-default btn-sm js-toggle-answer">Yes</button>
                         }
-                         <br /><br />
+
+                        <hr />
                     </div>
                 </li>
-                
             </ul>
         </div>
-        <hr />
-        }
+    }
 </div>
-<br /><br />
 
 @section scripts
 {
     <script>
         $(document).ready(function () {
-            
+
             $(".js-toggle-answer").click(function(e) {
                 var button = $(e.target);
                 $.post("/api/HYEAnswers", { HYEQuestionId: button.attr("data-hyeQuestionId-id") })
@@ -62,7 +64,7 @@
                     alert("Something went wrong! Please choose another question to answer.");
                 });
             });
-        
+
 
         $(".js-toggle-no").click(function (e) {
             var button = $(e.target);
@@ -76,7 +78,7 @@
                 alert("Something went wrong!");
             });
         });
-            
+
 
             $(".js-toggle-friend").click(function (e) {
                 var button = $(e.target);

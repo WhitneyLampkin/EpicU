@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using HYE_SocialNetwork.Models;
+using HYE_SocialNetwork.ViewModels;
+using System.Collections.Generic;
 
 namespace HYE_SocialNetwork.Controllers
 {
@@ -17,11 +19,17 @@ namespace HYE_SocialNetwork.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private List<ApplicationUser> users;
+
+        private ApplicationDbContext db;
 
         public AccountController()
         {
+            var db = new ApplicationDbContext();
+            var users = new List<ApplicationUser>();
+            
         }
-
+        
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
@@ -52,6 +60,17 @@ namespace HYE_SocialNetwork.Controllers
             }
         }
 
+        
+
+        [Authorize]
+        public ActionResult Index()
+        {
+            var result = from user in db.Users
+                         select new UsersViewModel { userName = user.FirstName + " " + user.LastName };
+
+            return View(result);
+        }
+        
         //
         // GET: /Account/Login
         [AllowAnonymous]
