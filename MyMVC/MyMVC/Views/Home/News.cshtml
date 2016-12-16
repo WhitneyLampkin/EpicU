@@ -1,0 +1,16 @@
+﻿@model List<MyMVC.Models.NewsItem>
+
+@{
+    ViewBag.Title = "News";
+}
+
+<h2>News</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@Url.Action("NewsDetail", "Home", new {id = item.Id})">@item.Id @item.Title</a>
+        </li>
+    }
+</ul>
