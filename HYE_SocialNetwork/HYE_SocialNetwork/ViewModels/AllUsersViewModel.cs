@@ -10,7 +10,7 @@ namespace HYE_SocialNetwork.ViewModels
     {
         public IEnumerable<ApplicationUser> HYEUsers { get; set; }
 
-        public string Displayame { get; set; }
+        public string DisplayName { get; set; }
         public DateTime Birthday { get; set; }
         public string Gender { get; set; }
         public string Email { get; set; }

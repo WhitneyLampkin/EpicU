@@ -209,11 +209,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FriendshipsController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\HYEAnswersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="DTOs\FollowingDto.cs" />
     <Compile Include="DTOs\FriendshipDto.cs" />
     <Compile Include="DTOs\HYEAnswerDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -295,6 +296,14 @@
     <Compile Include="Migrations\201612101234399_AddedInquirerIdToHYEQuestions.Designer.cs">
       <DependentUpon>201612101234399_AddedInquirerIdToHYEQuestions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612290042191_FollowingsTable.cs" />
+    <Compile Include="Migrations\201612290042191_FollowingsTable.Designer.cs">
+      <DependentUpon>201612290042191_FollowingsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612291135364_NullFriendshipIdProperty.cs" />
+    <Compile Include="Migrations\201612291135364_NullFriendshipIdProperty.Designer.cs">
+      <DependentUpon>201612291135364_NullFriendshipIdProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Following.cs" />
@@ -348,7 +357,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="DTOs\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -446,6 +455,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612101234399_AddedInquirerIdToHYEQuestions.resx">
       <DependentUpon>201612101234399_AddedInquirerIdToHYEQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612290042191_FollowingsTable.resx">
+      <DependentUpon>201612290042191_FollowingsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612291135364_NullFriendshipIdProperty.resx">
+      <DependentUpon>201612291135364_NullFriendshipIdProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -16,7 +16,7 @@
                             
                             @if (Model.ShowActions)
                             {
-                                <button class="btn btn-sm btn-link js-toggle-friend" data-user-id="@hyeQuestion.Inquirer">Add Friend</button>
+                                <button class="btn btn-sm btn-link js-toggle-follow" data-hyeQuestionInquirerId-id="@hyeQuestion.InquirerId">Add Friend</button>
                             }
                             
                         </span>
@@ -78,15 +78,15 @@
         });
             
 
-            $(".js-toggle-friend").click(function (e) {
+            $(".js-toggle-follow").click(function (e) {
                 var button = $(e.target);
-                $.post("/api/Friendships", { RequesteeId: button.attr("data-user-id") })
+                $.post("/api/followings", { followeeId: button.attr("data-hyeQuestionInquirerId-id") })
                         .done(function () {
                             button.text("Friends");
                         })
                         .fail(function () {
-                            alert("Oops, something went wrong!");
-                        })
+                            alert("Oops! Your friend request was unsuccessful.");
+                        });
                     });
         });
     </script>

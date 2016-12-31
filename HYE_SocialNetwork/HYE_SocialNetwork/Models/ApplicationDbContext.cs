@@ -7,7 +7,7 @@ namespace HYE_SocialNetwork.Models
     {
         public DbSet<HYEQuestion> HYEQuestions { get; set; }
         public DbSet<HYEAnswer> HYEAnswers { get; set; }
-        public DbSet<Friendship> Friendships { get; set; }
+        public DbSet<Following> Followings { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -21,6 +21,8 @@ namespace HYE_SocialNetwork.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
+            //Turns off on cascade delete with fluent API
             modelBuilder.Entity<HYEAnswer>()
                 .HasRequired(a => a.HYEQuestion)
                 .WithMany()
@@ -28,13 +30,13 @@ namespace HYE_SocialNetwork.Models
 
             //Relationship between the Requester and Requestee for the Friendship model
             modelBuilder.Entity<ApplicationUser>()
-                .HasMany(u => u.Requesters)
-                .WithRequired(r => r.Requestee)
+                .HasMany(u => u.Followers)
+                .WithRequired(f => f.Followee)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ApplicationUser>()
-                .HasMany(u => u.Requestees)
-                .WithRequired(r => r.Requester)
+                .HasMany(u => u.Followees)
+                .WithRequired(f => f.Follower)
                 .WillCascadeOnDelete(false);
 
             base.OnModelCreating(modelBuilder);
