@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A59C553C-3352-4B88-99FE-9D03CD3A4160}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blog.Web</RootNamespace>
+    <AssemblyName>Blog.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Feedback.mdf" />
+    <Content Include="App_Data\Feedback_log.ldf">
+      <DependentUpon>Feedback.mdf</DependentUpon>
+    </Content>
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\ionicons.min.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.css" />
+    <Content Include="css\Projects.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\slider.css" />
+    <Content Include="fonts\ionicons.svg" />
+    <Content Include="images\about\about-company.jpg" />
+    <Content Include="images\about\about.jpg" />
+    <Content Include="images\author\about.jpg" />
+    <Content Include="images\author\author-bg.jpg" />
+    <Content Include="images\author\author.jpg" />
+    <Content Include="images\avater-1.jpg" />
+    <Content Include="images\avater-2.jpg" />
+    <Content Include="images\avater.jpg" />
+    <Content Include="images\blogpic2.png" />
+    <Content Include="images\blogpic3.png" />
+    <Content Include="images\blog\post-1.jpg" />
+    <Content Include="images\blog\post-2.jpg" />
+    <Content Include="images\blog\post-3.jpg" />
+    <Content Include="images\boringblog.png" />
+    <Content Include="images\clients\logo-1.jpg" />
+    <Content Include="images\clients\logo-2.jpg" />
+    <Content Include="images\clients\logo-3.jpg" />
+    <Content Include="images\clients\logo-4.jpg" />
+    <Content Include="images\clients\logo-5.jpg" />
+    <Content Include="images\FullSizeRender.jpg" />
+    <Content Include="images\icons\close.png" />
+    <Content Include="images\icons\i_next.png" />
+    <Content Include="images\icons\i_prev.png" />
+    <Content Include="images\icons\left.png" />
+    <Content Include="images\icons\map-marker.png" />
+    <Content Include="images\icons\next.png" />
+    <Content Include="images\icons\prev.png" />
+    <Content Include="images\icons\quotes.png" />
+    <Content Include="images\icons\right.png" />
+    <Content Include="images\LifeEvents\LE_About.png" />
+    <Content Include="images\LifeEvents\LE_Comments.png" />
+    <Content Include="images\LifeEvents\LE_Login.png" />
+    <Content Include="images\LifeEvents\LE_Profile.png" />
+    <Content Include="images\LifeEvents\LE_Register.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\NewFolder1\realblog1.png" />
+    <Content Include="images\Pic1.gif" />
+    <Content Include="images\pic2.gif" />
+    <Content Include="images\portfolio\item-1.jpg" />
+    <Content Include="images\portfolio\item-2.jpg" />
+    <Content Include="images\portfolio\item-3.jpg" />
+    <Content Include="images\portfolio\item-4.jpg" />
+    <Content Include="images\portfolio\item-5.jpg" />
+    <Content Include="images\portfolio\item-6.jpg" />
+    <Content Include="images\portfolio\post-1.jpg" />
+    <Content Include="images\realblog1.png" />
+    <Content Include="images\Selfie.jpg" />
+    <Content Include="images\NewFolder1\blogpic1.png" />
+    <Content Include="images\NewFolder1\blogpic2.png" />
+    <Content Include="images\NewFolder1\testblack.png" />
+    <Content Include="images\Post1.png" />
+    <Content Include="images\Post2.png" />
+    <Content Include="images\Post3.png" />
+    <Content Include="images\slider.jpg" />
+    <Content Include="images\team.jpg" />
+    <Content Include="images\team\team-1.jpg" />
+    <Content Include="images\team\team-2.jpg" />
+    <Content Include="images\team\team-3.jpg" />
+    <Content Include="images\team\team-4.jpg" />
+    <Content Include="images\testblack.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.fancybox.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\slider.js" />
+    <Content Include="js\vendor\modernizr-2.6.2.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Problem2Blog.aspx" />
+    <Content Include="Problem3Blog.aspx" />
+    <Content Include="AllProjects.aspx" />
+    <Content Include="ScienceProject.aspx" />
+    <Content Include="LifeEvents.aspx" />
+    <Content Include="SeeMessages.aspx" />
+    <Content Include="ProjectLifeEvents.aspx" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons.woff" />
+    <Content Include="images\about\Thumbs.db" />
+    <Content Include="images\portfolio\Thumbs.db" />
+    <Content Include="less\main.less" />
+    <Content Include="less\responsive.less" />
+    <Content Include="Problem1Blog.aspx" />
+    <Content Include="Projects.Master" />
+    <Content Include="ProjectEulerDemos.aspx" />
+    <Content Include="404.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="Default.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="BlogPosts.aspx" />
+    <Content Include="SingleBlogPost.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Projects.Master.cs">
+      <DependentUpon>Projects.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Projects.Master.designer.cs">
+      <DependentUpon>Projects.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Problem1Blog.aspx.cs">
+      <DependentUpon>Problem1Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Problem1Blog.aspx.designer.cs">
+      <DependentUpon>Problem1Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectEulerDemos.aspx.cs">
+      <DependentUpon>ProjectEulerDemos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectEulerDemos.aspx.designer.cs">
+      <DependentUpon>ProjectEulerDemos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleBlogPost.Master.cs">
+      <DependentUpon>SingleBlogPost.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleBlogPost.Master.designer.cs">
+      <DependentUpon>SingleBlogPost.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogPosts.aspx.cs">
+      <DependentUpon>BlogPosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogPosts.aspx.designer.cs">
+      <DependentUpon>BlogPosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Problem2Blog.aspx.cs">
+      <DependentUpon>Problem2Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Problem2Blog.aspx.designer.cs">
+      <DependentUpon>Problem2Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Problem3Blog.aspx.cs">
+      <DependentUpon>Problem3Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Problem3Blog.aspx.designer.cs">
+      <DependentUpon>Problem3Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllProjects.aspx.cs">
+      <DependentUpon>AllProjects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllProjects.aspx.designer.cs">
+      <DependentUpon>AllProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScienceProject.aspx.cs">
+      <DependentUpon>ScienceProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScienceProject.aspx.designer.cs">
+      <DependentUpon>ScienceProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LifeEvents.aspx.cs">
+      <DependentUpon>LifeEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LifeEvents.aspx.designer.cs">
+      <DependentUpon>LifeEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeeMessages.aspx.cs">
+      <DependentUpon>SeeMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeeMessages.aspx.designer.cs">
+      <DependentUpon>SeeMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectLifeEvents.aspx.cs">
+      <DependentUpon>ProjectLifeEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectLifeEvents.aspx.designer.cs">
+      <DependentUpon>ProjectLifeEvents.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Domain\Blog.Domain.csproj">
+      <Project>{d6f5a584-df9c-4bbf-a487-893573d1211d}</Project>
+      <Name>Blog.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blog.DTO\Blog.DTO.csproj">
+      <Project>{15b7c580-8d97-4e28-b1a2-b4ec7defce74}</Project>
+      <Name>Blog.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blog.ProjectEuler\Blog.ProjectEuler.csproj">
+      <Project>{9d57b8ef-1b79-4357-8df5-a66a915f40e4}</Project>
+      <Name>Blog.ProjectEuler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50984</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50984/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
