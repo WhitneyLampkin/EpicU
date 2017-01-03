@@ -4,37 +4,34 @@
     ViewBag.Title = "My Questions";
 }
 
-<h2>Asked</h2>
-
+<h2>My Questions</h2>
+<hr />
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.DateTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Question)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Liked)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Question)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Liked)
-        </td>
-    </tr>
-}
+<div class="row">
+    @foreach (var hyeQuestion in Model)
+    {
+        <div class="qContainer">
+            <ul class="questions">
+                <li>
+                    <div class="details">
+                        <span class="spotlightText">
+                            @hyeQuestion.DateTime
+                        </span><br />
+                        <span class="spotlightText">
+                            @hyeQuestion.Question
+                        </span>
+                        <div class="actions">
+                            <a href="@Url.Action("Edit", "Questions", new { id = hyeQuestion.Id })" >Edit</a>
+                        </div>
+                        <br /><br />
+                    </div>
+                </li>
 
-</table>
+            </ul>
+        </div>
+    }
+</div>
+<br /><br />

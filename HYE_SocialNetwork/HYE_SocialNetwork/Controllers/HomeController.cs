@@ -37,6 +37,63 @@ namespace HYE_SocialNetwork.Controllers
             return View(viewModel);
         }
 
+        [Authorize]
+        public ActionResult ViewFollowees()
+        {
+            var currentUserId = User.Identity.GetUserId();
+
+            var followees = db.Followings
+                .Where(u => u.FollowerId == currentUserId)
+                .Select(f => f.Followee)
+                .ToList();
+
+            var viewModel = new FollowingViewModel()
+            {
+                Followees = followees,
+                ShowActions = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
+        }
+
+        [Authorize]
+        public ActionResult ViewFollowers()
+        {
+            var currentUserId = User.Identity.GetUserId();
+
+            var followers = db.Followings
+                .Where(u => u.FolloweeId == currentUserId)
+                .Select(f => f.Follower)
+                .ToList();
+
+            var viewModel = new FollowingViewModel()
+            {
+                Followers = followers,
+                ShowActions = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
+        }
+
+        [Authorize]
+        public ActionResult AllFollowings()
+        {
+            var currentUserId = User.Identity.GetUserId();
+
+            var followers = db.Followings
+                .Where(u => u.FolloweeId == currentUserId)
+                .Select(f => f.Follower)
+                .ToList();
+
+            var viewModel = new FollowingViewModel()
+            {
+                Followers = followers,
+                ShowActions = User.Identity.IsAuthenticated
+            };
+
+            return View(viewModel);
+        }
+
         // Only Authenticated users can access thier profile
         [Authorize]
         public ActionResult Profile()
@@ -47,11 +104,15 @@ namespace HYE_SocialNetwork.Controllers
             // Get the current logged in User and look up the user in ASP.NET Identity
             var currentUser = manager.FindById(User.Identity.GetUserId());
 
+
+
             // Recover the profile information about the logged in user
             ViewBag.DisplayName = currentUser.DisplayName;
             ViewBag.Birthday = currentUser.Birthdate;
             ViewBag.Gender = currentUser.Gender;
             ViewBag.Email = currentUser.Email;
+            ViewBag.Followers = currentUser.Followers.ToList();
+            ViewBag.Followees = currentUser.Followees.ToList();
 
             return View();
         }

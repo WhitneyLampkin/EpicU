@@ -5,7 +5,6 @@
 <div class="profileContainer">
 <h1>Your Profile</h1>
 
-
     <p>
         @ViewBag.DisplayName's Profile
     </p>
@@ -18,4 +17,15 @@
     <p>
         Birthday = @ViewBag.Birthday
     </p>
+    <p>
+        Followers = @ViewBag.Followers
+    </p>
+    <p>
+        Followees = @ViewBag.Followees
+    </p>
+
+    
+    <p>@Html.ActionLink("Who I'm Following", "ViewFollowees", "Home")</p>
+    <p>@Html.ActionLink("My Followers", "ViewFollwers", "Home")</p>
+    
 </div>

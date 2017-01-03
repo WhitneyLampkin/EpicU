@@ -190,6 +190,15 @@ h6,
     font-size: 22px;
 }
 
+.questions > li .actions {
+    font-size: 15px;
+    display: none;
+}
+
+.questions > li:hover .actions {
+    display: block;
+}
+
 .btn-sm {
     font-size: 12px;
 }

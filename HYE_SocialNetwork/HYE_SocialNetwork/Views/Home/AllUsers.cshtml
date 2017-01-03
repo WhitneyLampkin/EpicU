@@ -6,6 +6,9 @@
 <h2>H.Y.E. Users</h2>
 <hr />
 
+<p>@Html.ActionLink("Users I Follow", "ViewFollowees", "Home")</p>
+<p>@Html.ActionLink("My Followers", "ViewFollowers", "Home")</p>
+
 @foreach(var hyeUser in Model.HYEUsers)
 {
     <div class="profileContainer">

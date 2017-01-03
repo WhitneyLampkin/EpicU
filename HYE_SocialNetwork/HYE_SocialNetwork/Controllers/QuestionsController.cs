@@ -46,11 +46,11 @@ namespace HYE_SocialNetwork.Controllers
                 .Where(a => a.InquirerId == currentUserId)
                 .ToList();
 
-            var viewModel = new AskedViewModel()
-            {
-                MyQuestions = questions,
-                ShowActions = User.Identity.IsAuthenticated
-            };
+            //var viewModel = new QuestionFormViewModel()
+            //{
+            //    MyQuestions = questions,
+            //    ShowActions = User.Identity.IsAuthenticated
+            //};
 
             return View(questions);
         }
@@ -79,12 +79,29 @@ namespace HYE_SocialNetwork.Controllers
         }
 
         [Authorize]
+        public ActionResult Edit(int id)
+        {
+            var currentUser = User.Identity.GetUserId();
+            var question = db.HYEQuestions.Single(q => q.Id == id && q.InquirerId == currentUser);
+
+            var hyeQuestion = new HYEQuestion
+            {
+                //Initial so the form will be autopopulated with current values
+                Question = question.Question,
+                Id = question.Id,
+            };
+
+            //This will redirect to the view that submits a new quetion
+            return View("QuestionForm", hyeQuestion);
+        }
+
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken] //Prevents CSRF Attacks
         public ActionResult Create(HYEQuestion viewModel)
         {
             if (!ModelState.IsValid)
-                return View("Create", viewModel);
+                return View("QuestionForm", viewModel);
 
             var currentUserId = User.Identity.GetUserId();
             var currentUser = db.Users.Single(u => u.Id == currentUserId);

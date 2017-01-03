@@ -1,0 +1,30 @@
+﻿@model HYE_SocialNetwork.ViewModels.FollowingViewModel
+@{ 
+    ViewBag.Title = "Users I Follow";
+}
+
+<h2>Users I Follow</h2>
+<hr />
+
+<p>@Html.ActionLink("My Followers", "ViewFollowers", "Home")</p>
+
+@foreach (var hyeUser in Model.Followees)
+{
+    <div class="profileContainer">
+        <p>
+            Name: @hyeUser.DisplayName
+        </p>
+        <p>
+            Email: @hyeUser.Email
+
+        </p>
+        <p>
+            Gender: @hyeUser.Gender
+        </p>
+        <p>
+            Birthday: @hyeUser.Birthdate
+        </p>
+    </div>
+}
+
+
