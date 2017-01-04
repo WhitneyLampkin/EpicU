@@ -1,0 +1,109 @@
+﻿@model HYE_SocialNetwork.ViewModels.ProfileViewModel
+
+<h2>My Profile</h2>
+
+<div class="row">
+    
+    @*Profile Column #1: Questions the user has asked*@
+
+    <div class="col-md-3">
+        <h4 class="">My Questions:</h4>
+        @foreach (var hyeQuestion in Model.MyQuestions)
+        {
+            <div class="qContainer">
+                <ul class="questions">
+                    <li>
+                        <div class="details">
+                            <span class="inquirer">
+                                @hyeQuestion.DateTime.ToShortDateString() at @hyeQuestion.DateTime.ToShortTimeString()
+                        </span>
+                        <span>
+                            @hyeQuestion.Question
+                        </span>
+                        <br /><br />
+
+                        <hr />
+                    </div>
+                </li>
+            </ul>
+        </div>
+        }
+
+    </div>
+
+    @*Profile Column #2: Questions answered by the user and their response*@
+
+    <div class="col-md-3">
+        Questions I've Answered:
+        @foreach (var hyeQuestion in Model.MyQuestions)
+        {
+            <div class="qContainer">
+                <ul class="questions">
+                    <li>
+                        <div class="details">
+                            <span class="inquirer">
+                                @hyeQuestion.DateTime.ToShortDateString() at @hyeQuestion.DateTime.ToShortTimeString()
+                            </span>
+                            <span>
+                                @hyeQuestion.Question
+                            </span>
+                            <br /><br />
+
+                            <hr />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        }
+
+    </div>
+
+    @*Profile Column #3: User's Followers*@
+
+    <div class="col-md-3">
+        My Followers:
+        @foreach (var follower in Model.MyFollowers)
+        {
+            <div class="qContainer">
+                <ul class="questions">
+                    <li>
+                        <div class="details">
+                            <span class="inquirer">
+                                @follower.DisplayName
+                            </span>
+                            <br /><br />
+
+                            <hr />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        }
+
+    </div>
+
+    @*Profile Column #4: Who the user follows*@
+
+    <div class="col-md-3">
+        Who I'm Following:
+        @foreach (var followee in Model.MyFollowees)
+        {
+            <div class="qContainer">
+                <ul class="questions">
+                    <li>
+                        <div class="details">
+                            <span class="inquirer">
+                                @followee.DisplayName
+                            </span>
+                            <br /><br />
+
+                            <hr />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        }
+
+    </div>
+</div>
+

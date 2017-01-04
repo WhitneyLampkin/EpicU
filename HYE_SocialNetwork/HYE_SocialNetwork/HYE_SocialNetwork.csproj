@@ -213,6 +213,7 @@
     <Compile Include="Controllers\HYEAnswersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="DTOs\FollowingDto.cs" />
     <Compile Include="DTOs\FriendshipDto.cs" />
@@ -390,10 +391,10 @@
     <Content Include="Views\Home\AllUsers.cshtml" />
     <Content Include="Views\Home\ViewFollowees.cshtml" />
     <Content Include="Views\Home\ViewFollowers.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Profile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

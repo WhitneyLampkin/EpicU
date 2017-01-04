@@ -31,6 +31,8 @@ namespace HYE_SocialNetwork.Controllers
 
             var answer = new HYEAnswer
             {
+                //This is hardcoded so that "yes" will always be saved in the database as the answer. 
+                //Come back to fix this later!
                 Answer = true,
                 HYEQuestionId = dto.HYEQuestionId,
                 ResponderId = currentUserId,
