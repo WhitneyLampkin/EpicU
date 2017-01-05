@@ -123,21 +123,43 @@ h6,
     border-color: #E91E63;
 }
 
-.profileContainer {
-    margin: 30px;
-}
-
 /*Page-Level Styles*/
 
+html, body {
+    height: 100%;
+}
+
+.heightController {
+
+}
+
+.profileContainer {
+    margin: 10px;
+}
+
+.panel-default {
+    border-radius: 0px;
+}
+
+.panel-default > .panel-heading {
+    background-color: white;
+    border-bottom-width: 5px;
+    border-bottom-color: #333399;
+}
+.panel-body {
+    height: 600px;
+    overflow-y: scroll;
+}
+
 .qContainer {
-    margin: 50px 0px;
+    margin-bottom: 50px;
     max-width: 800px;
     max-height: 600px;
-    padding: 20px 0px;
+    padding: 30px;
 }
 
 .questions {
-    padding: 7px;
+    padding: 0px;
 }
 
 .questions > details > .btn {
@@ -146,8 +168,11 @@ h6,
 
 .questions > li {
     position: relative;
-    margin-bottom: 30px;
     list-style: none;
+}
+
+.qContainer > li:first-child {
+    margin-top: 0px;
 }
 
 .questions > li .date {
@@ -175,8 +200,6 @@ h6,
 
 .questions > li .details {
     position: absolute;
-    top: 0;
-    left: 70px;
 }
 
 .questions > li .details .inquirer {
@@ -184,6 +207,10 @@ h6,
     display: block;
     font-size: 14px;
     color: #333399;
+}
+
+.questions > li .details .detailsContent {
+
 }
 
 .questions > li .details .spotlightText {

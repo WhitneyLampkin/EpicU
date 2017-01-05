@@ -24,7 +24,10 @@
                     <li>@Html.ActionLink("Submit Question", "QuesitonForm", "Questions")</li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("All Users", "AllUsers", "Home")</li>
+                    <li>@Html.ActionLink("Profile", "Index", "Profile")</li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Community", "AllUsers", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
