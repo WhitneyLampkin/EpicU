@@ -1,0 +1,13 @@
+Encapsulation: Used to hide implementation details of a class.
+
+Question: Why is this important to object oriented programming and object collaboration design?
+
+Answer: Ultimately, we don't want other objects to have access to the class' details and implementation 
+of another object and misuse them. 
+
+Nor do we want to create unwanted dependencies that would make the code less flexible.
+
+Encapsulation makes for a cleaner collaboration relationship between other objects. 
+
+Leads to more maintainable code.
+
