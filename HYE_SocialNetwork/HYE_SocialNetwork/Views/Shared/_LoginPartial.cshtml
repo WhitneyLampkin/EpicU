@@ -10,7 +10,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName() <span class="caret"></span></a>
             <ul class="dropdown-menu">
 
-                <li><a href="@Url.Action("Profile", "Home")">My Profile</a></li>
+                <li><a href="@Url.Action("Index", "Profile")">My Profile</a></li>
                 <li><a href="@Url.Action("Asked", "Questions")">My Questions</a></li>
                 <li><a href="@Url.Action("Answered", "Questions")">My Answers</a></li>
                 <li><a href="@Url.Action("Index", "Home")">Friends' Questions</a></li>

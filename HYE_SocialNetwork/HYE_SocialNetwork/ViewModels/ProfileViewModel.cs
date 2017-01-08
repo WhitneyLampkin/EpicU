@@ -12,6 +12,7 @@ namespace HYE_SocialNetwork.ViewModels
         [Key]
         public int Id { get; set; }
         public ApplicationUser User { get; set; }
+        public string UserName { get; set; }
         public List<HYEQuestion> MyQuestions { get; set; }
         public List<HYEAnswer> MyAnswers { get; set; }
         public List<ApplicationUser> MyFollowees { get; set; }

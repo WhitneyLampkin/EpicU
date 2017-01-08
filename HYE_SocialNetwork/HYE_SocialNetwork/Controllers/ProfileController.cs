@@ -13,14 +13,17 @@ namespace HYE_SocialNetwork.Controllers
     {
         private ApplicationDbContext db;
 
+        
         public ProfileController()
         {
             db = new ApplicationDbContext();
         }
 
         // GET: Profile
+        [Authorize]
         public ActionResult Index()
         {
+
             var currentUserId = User.Identity.GetUserId();
 
             var answers = db.HYEAnswers
@@ -43,6 +46,7 @@ namespace HYE_SocialNetwork.Controllers
 
             var viewModel = new ProfileViewModel
             {
+                User = currentUserId,
                 MyAnswers = answers,
                 MyQuestions = questions,
                 MyFollowees = followees,
