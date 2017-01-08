@@ -17,7 +17,7 @@ namespace InterfaceInheritance
             };
 
             var book = new Book()
-            {
+            
                 Title = "Some Title",
                 Author = "Some Author"
             };
