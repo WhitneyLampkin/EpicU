@@ -10,4 +10,4 @@ HTML Practice (Chemistry Lab Report) Live Demo: http://codepen.io/WLampkin/full/
 
 FreeCodeCamp's Tribute Page Project: http://codepen.io/WLampkin/full/BLVdKB/
 
-Personal Blog: http://whitneysblog.azurewebsites.net
+Personal Website: http://whitneylampkin.com
